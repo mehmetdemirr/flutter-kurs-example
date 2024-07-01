@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Kurs App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: false,
+        useMaterial3: true,
       ),
       home: const DimamikSayfa(),
     );
@@ -65,13 +66,18 @@ class _DimamikSayfaState extends State<DimamikSayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ilk uygulmam"),
+        title: const Text("Deneme Başlık"),
       ),
-      body: Container(
-        width: 300,
-        height: 500,
-        color: Colors.amber,
-        child: const Text("body alanına yazı yazdım"),
+      body: Center(
+        child: Container(
+          color: Colors.yellow,
+          height: 200,
+          width: 200,
+          alignment: Alignment.center,
+          child: const Text(
+            "test",
+          ),
+        ),
       ),
     );
   }
