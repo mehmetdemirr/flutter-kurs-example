@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:kurs_app/ders6/align_example.dart';
+import 'package:kurs_app/ders6/center_example.dart';
+import 'package:kurs_app/ders6/expanded_example.dart';
+import 'package:kurs_app/ders6/freepik_example.dart';
+import "package:kurs_app/ders6/main_axis_size.dart";
+import 'package:kurs_app/ders6/padding_example.dart';
+import 'package:kurs_app/ders6/sizedbox_example.dart';
+import 'package:kurs_app/ders6/spacer_example.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,8 +20,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.blue,
+          centerTitle: true,
+        ),
       ),
-      home: const DimamikSayfa(),
+      home: const ExpandedExample(),
     );
   }
 }
