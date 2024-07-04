@@ -7,6 +7,13 @@ import "package:kurs_app/ders6/main_axis_size.dart";
 import 'package:kurs_app/ders6/padding_example.dart';
 import 'package:kurs_app/ders6/sizedbox_example.dart';
 import 'package:kurs_app/ders6/spacer_example.dart';
+import 'package:kurs_app/ders7/ders7_example.dart';
+import 'package:kurs_app/ders7/example.dart';
+import 'package:kurs_app/ders7/fab.dart';
+import 'package:kurs_app/ders7/gesture_detector_example.dart';
+import 'package:kurs_app/ders7/inkwell_example.dart';
+import 'package:kurs_app/ders7/switch_example.dart';
+import 'package:kurs_app/ders7/textfield_example.dart';
 
 void main() => runApp(const MyApp());
 
@@ -21,11 +28,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.blue,
-          centerTitle: true,
+          backgroundColor: Colors.white,
+          centerTitle: false,
         ),
+        // textTheme: TextTheme()
       ),
-      home: const ExpandedExample(),
+      home: const ExapmleScreen(),
     );
   }
 }
