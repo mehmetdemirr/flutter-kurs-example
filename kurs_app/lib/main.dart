@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kurs_app/ders6/align_example.dart';
-import 'package:kurs_app/ders6/center_example.dart';
-import 'package:kurs_app/ders6/expanded_example.dart';
-import 'package:kurs_app/ders6/freepik_example.dart';
-import "package:kurs_app/ders6/main_axis_size.dart";
-import 'package:kurs_app/ders6/padding_example.dart';
-import 'package:kurs_app/ders6/sizedbox_example.dart';
-import 'package:kurs_app/ders6/spacer_example.dart';
-import 'package:kurs_app/ders7/ders7_example.dart';
-import 'package:kurs_app/ders7/example.dart';
-import 'package:kurs_app/ders7/fab.dart';
-import 'package:kurs_app/ders7/gesture_detector_example.dart';
-import 'package:kurs_app/ders7/inkwell_example.dart';
-import 'package:kurs_app/ders7/switch_example.dart';
-import 'package:kurs_app/ders7/textfield_example.dart';
+import 'package:kurs_app/ders8/card_example.dart';
+import 'package:kurs_app/ders8/ders8_screen.dart';
+import 'package:kurs_app/ders8/first_screen.dart';
+import 'package:kurs_app/ders8/form_example.dart';
+import 'package:kurs_app/ders8/sayfa1_screen.dart';
+import 'package:kurs_app/ders8/scroll_view_screen.dart';
+import 'package:kurs_app/ders8/web_view_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -25,15 +17,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kurs App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          centerTitle: false,
-        ),
-        // textTheme: TextTheme()
-      ),
-      home: const ExapmleScreen(),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+          useMaterial3: true,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.blue,
+            elevation: 20,
+          ),
+          cardTheme: const CardTheme(
+            color: Color.fromARGB(255, 241, 122, 114),
+          ),
+          // textTheme: const TextTheme(
+          //   bodySmall: TextStyle()
+          // ),
+          snackBarTheme: const SnackBarThemeData(
+            backgroundColor: Colors.black12,
+          )),
+      home: const FormExample(),
     );
   }
 }
