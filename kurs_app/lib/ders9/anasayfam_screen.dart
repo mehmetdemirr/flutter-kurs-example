@@ -31,6 +31,11 @@ class _AnasayfamScreenState extends State<AnasayfamScreen> {
                     color: Colors.blue,
                     width: 300,
                     height: 300,
+                  ),
+                  Container(
+                    color: Colors.yellow,
+                    width: 300,
+                    height: 300,
                   )
                 ],
               ),

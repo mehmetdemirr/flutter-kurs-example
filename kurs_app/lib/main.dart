@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:kurs_app/ders8/gridview_example.dart';
-import 'package:kurs_app/ders8/listview2_example.dart';
-import 'package:kurs_app/ders8/listview_example.dart';
-import 'package:kurs_app/ders9/ders9_example.dart';
-import 'package:kurs_app/ders9/ders9example2.dart';
-import 'package:kurs_app/ders9/share_plus_example.dart';
-import 'package:kurs_app/ders9/splash_screen.dart';
-import 'package:kurs_app/ders9/tabbar_example_screen.dart';
+import 'package:kurs_app/ders10/uygulama1/splash_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -20,21 +13,13 @@ class MyApp extends StatelessWidget {
       title: 'Kurs App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.blue,
-          elevation: 20,
+        
+        buttonTheme: const ButtonThemeData(
+          height: 100,
         ),
-        cardTheme: const CardTheme(
-          color: Color.fromARGB(255, 201, 181, 242),
-        ),
-        // textTheme: const TextTheme(
-        //   bodySmall: TextStyle()
-        // ),
-        snackBarTheme: const SnackBarThemeData(
-          backgroundColor: Colors.black,
-        ),
+        useMaterial3: false,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 221, 217, 217),
+        // colorScheme:  ColorScheme(background: Colors.amber),
       ),
       home: const SplashScreen(),
       builder: EasyLoading.init(),
