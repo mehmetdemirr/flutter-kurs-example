@@ -12,11 +12,24 @@ class SharedPref {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getBool(SharedKeys.login.name) ?? false;
   }
+
+  Future<void> writeName(String value) async {
+    // Obtain shared preferences.
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString(SharedKeys.name.name, value);
+  }
+
+  Future<String> readName() async {
+    // Obtain shared preferences.
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString(SharedKeys.name.name) ?? "-";
+  }
 }
 
 enum SharedKeys {
   login,
   theme,
+  name,
 }
 
 // extension SharedKeysExtension on SharedKeys {
